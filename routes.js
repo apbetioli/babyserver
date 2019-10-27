@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+router.get("/", (req, res, next) => {
+    res.send("Hello baby");
+});
+
 router.post('/api/contact', (req, res, next) => {
     console.log(req.body);
     res.setHeader('Content-Type', 'application/json');

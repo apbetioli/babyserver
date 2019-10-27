@@ -8,6 +8,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(require('./routes.js'));
 
-app.listen(3001, () =>
+app.listen(process.env.PORT || 3001, () =>
   console.log('Express server is running on localhost:3001')
 );
