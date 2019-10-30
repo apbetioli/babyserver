@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(require('./app/controllers/pingController'));
 app.use("/api", require('./app/controllers/contactController'));
+app.use("/api", require('./app/controllers/subscribeController'));
 app.use(morgan('dev'));
 
 app.listen(process.env.PORT || 3001, () =>

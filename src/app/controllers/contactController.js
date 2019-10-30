@@ -12,6 +12,7 @@ router.post('/contact', async (req, res) => {
 
         res.status(201).send({ contact });
     } catch (e) {
+        console.log(e);
         res.status(400).send({ error: 'Não foi possível enviar a mensagem' });
     }
 
