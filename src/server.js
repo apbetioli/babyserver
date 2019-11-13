@@ -11,8 +11,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(require('./app/controllers/pingController'));
 app.use("/api", require('./app/controllers/contactController'));
+app.use("/api", require('./app/controllers/quadroController'));
 app.use("/api", require('./app/controllers/subscribeController'));
 app.use(morgan('dev'));
 
